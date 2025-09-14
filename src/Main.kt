@@ -34,5 +34,19 @@ fun main() {
     println("\nArreglo después de multiplicar por índice:")
     println(arreglo.joinToString(", "))
 
+    val buscado = 20
+    var encontrado = -1
+    for (i in arreglo.indices) {
+        if (arreglo[i] == buscado) {
+            encontrado = i
+            break
+        }
+    }
+
+    if (encontrado != -1) {
+        println("\nEl valor $buscado se encontró en la posición $encontrado")
+    } else {
+        println("\nEl valor $buscado no está en el arreglo")
+    }
 
 }
