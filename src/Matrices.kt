@@ -23,5 +23,22 @@ fun matrices(){
         println()
     }
 
+    // Sumar todos los elementos
+    var suma = 0
+    for (fila in matriz) {
+        for (valor in fila) {
+            suma += valor
+        }
+    }
+    println("\nSuma de todos los elementos: $suma")
 
+    // Intercambiar primera fila con última
+    val temp = matriz[0]
+    matriz[0] = matriz[2]
+    matriz[2] = temp
+
+    println("\nMatriz después de intercambiar primera y última fila:")
+    for (fila in matriz) {
+        println(fila.joinToString("\t"))
+    }
 }
